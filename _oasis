@@ -1,0 +1,25 @@
+OASISFormat: 0.1
+Name: ocaml-ptrace
+Version: 0.0.1
+LicenseFile: COPYING
+License: PROP
+Authors: William Le Ferrand
+BuildTools: ocamlbuild
+Plugins: DevFiles (0.2), META (0.2)
+Synopsis: Ptrace fun
+
+Library ptrace
+  Path: lib
+  Modules: Ptrace
+  CCLib: 
+  CSources: # libssh2_stubs.c #, libssh2_stubs_lwt.c
+  CCOpt: -fPIC
+  BuildDepends: Unix, lwt, lwt.unix, str 
+
+Executable test1
+  Path:         tests
+  MainIs:       test1.ml
+  Install:      false
+  ByteOpt: -thread
+  NativeOpt: -thread
+  BuildDepends: ptrace, lwt, str, lwt.unix, Unix
