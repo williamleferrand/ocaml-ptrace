@@ -28,3 +28,20 @@ value ocaml_ptrace (value ocaml_request, value ocaml_pid, value ocaml_addr, valu
   
   CAMLreturn (Val_int (rc)) ;  
 }
+
+
+/*
+ * trace_me
+ */ 
+
+value ocaml_trace_me (value ocaml_unit) {
+  CAMLparam1 (ocaml_unit); 
+  
+  int rc ; 
+
+  rc = ptrace (PT_TRACE_ME, 0, 0, 0); 
+
+  if (rc) caml_failwith ("libptrace: trace_me returned a nonzero code"); 
+  
+  CAMLreturn (Val_unit); 
+}
