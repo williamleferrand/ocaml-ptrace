@@ -12,7 +12,7 @@ Library ptrace
   Path: lib
   Modules: Ptrace
   CCLib: 
-  CSources: # libssh2_stubs.c #, libssh2_stubs_lwt.c
+  CSources: libptrace_stubs.c
   CCOpt: -fPIC
   BuildDepends: Unix, lwt, lwt.unix, str 
 

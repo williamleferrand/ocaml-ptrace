@@ -1,3 +1,3 @@
 (* ptrace *)
 
-let unit = ()
+external ptrace : int -> int -> int -> int -> int = "ocaml_ptrace"
