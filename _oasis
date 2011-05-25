@@ -14,7 +14,7 @@ Library ptrace
   CCLib: 
   CSources: libptrace_stubs.c
   CCOpt: -fPIC
-  BuildDepends: Unix, lwt, lwt.unix, str 
+  BuildDepends: unix, lwt, lwt.unix, str 
 
 Executable test1
   Path:         tests
@@ -22,4 +22,4 @@ Executable test1
   Install:      false
   ByteOpt: -thread
   NativeOpt: -thread
-  BuildDepends: ptrace, lwt, str, lwt.unix, Unix
+  BuildDepends: ptrace, lwt, str, lwt.unix, unix
