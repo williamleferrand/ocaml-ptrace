@@ -98,7 +98,7 @@ value ocaml_cont (value ocaml_pid, value ocaml_signal) {
   int sig ;
   int rc ;
   
-  addr = (caddr_t) 1; 
+  addr = (caddr_t) 0; 
 
   sig = Int_val (ocaml_signal); 
   
