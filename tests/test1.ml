@@ -27,6 +27,7 @@ let child () =
   display "Now I'm ready to be traced" ;
   
   exit (10) 
+
 (*
 let _ = 
   display "tracking programs with ptrace, test1" ; 
@@ -57,6 +58,6 @@ let _ =
         display "looping .." ;
         Unix.sleep 1 
       done ; 
-      exit 69
+      exit 33
     )
     
