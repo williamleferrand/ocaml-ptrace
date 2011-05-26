@@ -7,6 +7,7 @@
 #include <caml/alloc.h>
 #include <caml/custom.h>
 #include <caml/fail.h>
+#include <caml/signals.h>
 
 
 #include <errno.h>
@@ -104,7 +105,7 @@ value ocaml_cont (value ocaml_pid, value ocaml_signal) {
   
   printf ("signal: %d\n", sig) ;
 
-  rc = ptrace (PT_CONTINUE, Int_val (ocaml_pid), addr, sig); 
+  rc = ptrace (PT_CONTINUE, Int_val (ocaml_pid), addr, caml_convert_signal_number (sig)); 
 
   if (rc) {
       printf ("errno: %d\n", errno); 
