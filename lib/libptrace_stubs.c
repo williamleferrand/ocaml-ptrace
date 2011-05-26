@@ -11,7 +11,7 @@
 
 
 #include <errno.h>
-#include <sys/appleapiopts.h>
+
 #include <sys/cdefs.h>
 #include <sys/types.h>
 #include <sys/ptrace.h>
